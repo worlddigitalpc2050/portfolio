@@ -1,3 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palash Chakraborty – Portfolio</title>
+  <meta name="description" content="Portfolio of Palash Chakraborty – Senior IT Professional with 18 years of experience across multiple programming languages and domains (ex‑Cognizant)." />
+  <meta property="og:title" content="Palash Chakraborty – Portfolio" />
+  <meta property="og:description" content="18+ years in IT | Full‑stack | Cloud | Architecture | ex‑Cognizant" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
 
-<h1> I AM PALASH</h1>
+  <!-- Tailwind CSS CDN -->
+  <script src="script/cdn-min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Arial", "sans-serif"] },
+          colors: { brand: { DEFAULT: "#0ea5e9", dark: "#0284c7" } }
+        }
+      },
+      darkMode: 'class'
+    };
+  </script>
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="style/main.css" rel="stylesheet">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230ea5e9'/%3E%3Ctext x='50' y='62' font-size='54' text-anchor='middle' fill='white' font-family='Arial' %3EP%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .container { max-width: 1100px; }
+  </style>
+</head>
+<body class="font-sans bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 font-extrabold text-xl tracking-tight">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand text-white">PC</span>
+        <span>Palash Chakraborty</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#experience" class="hover:text-brand">Experience</a>
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+        <a href="#" id="resumeLink" class="inline-flex items-center rounded-xl bg-brand px-3 py-2 font-semibold text-white hover:bg-brand-dark">Download Resume</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0L17.95 7.05M7.05 16.95l-1.414 1.414M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+        </button>
+        <button class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700" id="menuBtn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#experience" class="hover:text-brand">Experience</a>
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+        <a href="#" id="resumeLinkMobile" class="inline-flex items-center rounded-xl bg-brand px-3 py-2 font-semibold text-white w-max hover:bg-brand-dark">Download Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="container mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <p class="text-brand font-semibold tracking-wide uppercase">Senior IT Professional</p>
+        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">Palash Chakraborty</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-xl">18 years of hands‑on experience building reliable software and leading engineering teams. Full‑stack development, cloud & DevOps, and solution architecture. Previously at <span class="font-semibold">Cognizant</span>.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center rounded-xl bg-brand px-4 py-2.5 font-semibold text-white hover:bg-brand-dark">View Projects</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900">Contact Me</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+          <ul class="grid grid-cols-2 gap-4 text-sm">
+            <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
+              <p class="text-3xl font-extrabold">18+</p>
+              <p class="text-slate-500 dark:text-slate-400">Years Experience</p>
+            </li>
+            <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
+              <p class="text-3xl font-extrabold">20+</p>
+              <p class="text-slate-500 dark:text-slate-400">Projects Delivered</p>
+            </li>
+            <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
+              <p class="text-3xl font-extrabold">10+</p>
+              <p class="text-slate-500 dark:text-slate-400">Programming Stacks</p>
+            </li>
+            <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800">
+              <p class="text-3xl font-extrabold">5</p>
+              <p class="text-slate-500 dark:text-slate-400">Domains</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
+      <div class="md:col-span-1">
+        <h2 class="text-2xl font-extrabold">About</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Quick snapshot</p>
+      </div>
+      <div class="md:col-span-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>I'm a results‑driven engineer who enjoys turning complex requirements into simple, scalable solutions. My background spans enterprise systems, microservices, and cloud‑native apps. I lead by example, write clean code, and collaborate closely with stakeholders to ship value.</p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+          <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">• Location: <span class="font-semibold">India</span></li>
+          <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">• Open to: <span class="font-semibold">Full‑time / Contract / Remote</span></li>
+          <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">• Past: <span class="font-semibold">Cognizant</span></li>
+          <li class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">• Strengths: <span class="font-semibold">System design, mentoring, delivery</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-extrabold">Skills</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Broad experience across languages, frameworks, and platforms</p>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-bold mb-3">Languages</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-xl border">JavaScript</span>
+            <span class="px-3 py-1 rounded-xl border">TypeScript</span>
+            <span class="px-3 py-1 rounded-xl border">Python</span>
+            <span class="px-3 py-1 rounded-xl border">Java</span>
+            <span class="px-3 py-1 rounded-xl border">C#</span>
+            <span class="px-3 py-1 rounded-xl border">SQL</span>
+            <span class="px-3 py-1 rounded-xl border">Go</span>
+          </div>
+        </div>
+        <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-bold mb-3">Frameworks & Tools</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-xl border">Node.js</span>
+            <span class="px-3 py-1 rounded-xl border">React</span>
+            <span class="px-3 py-1 rounded-xl border">.NET</span>
+            <span class="px-3 py-1 rounded-xl border">Spring Boot</span>
+            <span class="px-3 py-1 rounded-xl border">Django</span>
+            <span class="px-3 py-1 rounded-xl border">Docker</span>
+            <span class="px-3 py-1 rounded-xl border">Kubernetes</span>
+            <span class="px-3 py-1 rounded-xl border">GraphQL</span>
+          </div>
+        </div>
+        <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+          <h3 class="font-bold mb-3">Cloud & Data</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-xl border">AWS</span>
+            <span class="px-3 py-1 rounded-xl border">Azure</span>
+            <span class="px-3 py-1 rounded-xl border">GCP</span>
+            <span class="px-3 py-1 rounded-xl border">CI/CD</span>
+            <span class="px-3 py-1 rounded-xl border">Microservices</span>
+            <span class="px-3 py-1 rounded-xl border">PostgreSQL</span>
+            <span class="px-3 py-1 rounded-xl border">MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 md:py-24 border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-extrabold">Experience</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Selected roles & impact</p>
+
+      <ol class="mt-8 relative border-s-l border-slate-200 dark:border-slate-800 space-y-10">
+        <li class="ms-6">
+          <span class="absolute -start-2.5 mt-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-slate-950 bg-brand"></span>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+            <div class="flex flex-wrap justify-between gap-3">
+              <h3 class="font-bold">Senior Software Engineer / Tech Lead — Cognizant</h3>
+              <span class="text-sm text-slate-500">201X – 202X</span>
+            </div>
+            <ul class="mt-3 list-disc ps-5 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+              <li>Led a cross‑functional team to deliver microservices for a large enterprise client, improving scalability and reducing downtime by 40%.</li>
+              <li>Migrated legacy services to cloud‑native architecture on AWS with automated CI/CD pipelines.</li>
+              <li>Mentored engineers, conducted code reviews, and drove engineering best practices.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="ms-6">
+          <span class="absolute -start-2.5 mt-1.5 h-5 w-5 rounded-full border-4 border-white dark:border-slate-950 bg-brand"></span>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+            <div class="flex flex-wrap justify-between gap-3">
+              <h3 class="font-bold">Software Engineer — (Your Company)</h3>
+              <span class="text-sm text-slate-500">20XX – 20XX</span>
+            </div>
+            <ul class="mt-3 list-disc ps-5 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+              <li>Designed and implemented RESTful APIs supporting thousands of daily active users.</li>
+              <li>Optimized database queries and caching, cutting average latency by 30%.</li>
+              <li>Collaborated with product and QA to ship on schedule with high quality.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold">Projects</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">A few highlights (replace with your own)</p>
+        </div>
+        <div>
+          <a href="#" class="text-sm underline hover:no-underline">See all on GitHub</a>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+          <div class="p-6">
+            <h3 class="font-bold text-lg">Enterprise Microservices Platform</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Designed a suite of scalable microservices with Kubernetes, enabling independent deployments and faster feature delivery.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-lg border">Kubernetes</li>
+              <li class="px-2.5 py-1 rounded-lg border">Docker</li>
+              <li class="px-2.5 py-1 rounded-lg border">Spring Boot</li>
+              <li class="px-2.5 py-1 rounded-lg border">AWS</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+          <div class="p-6">
+            <h3 class="font-bold text-lg">Real‑time Analytics Dashboard</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Built a realtime dashboard with WebSockets & React, visualizing KPIs and alerting on anomalies.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-lg border">React</li>
+              <li class="px-2.5 py-1 rounded-lg border">Node.js</li>
+              <li class="px-2.5 py-1 rounded-lg border">PostgreSQL</li>
+              <li class="px-2.5 py-1 rounded-lg border">Redis</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+          <div class="p-6">
+            <h3 class="font-bold text-lg">NLP Grammar Corrector</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Fine‑tuned a T5‑based model to correct grammatical errors with high accuracy on custom datasets.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-lg border">Python</li>
+              <li class="px-2.5 py-1 rounded-lg border">Transformers</li>
+              <li class="px-2.5 py-1 rounded-lg border">FastAPI</li>
+              <li class="px-2.5 py-1 rounded-lg border">Docker</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 border-t border-slate-200 dark:border-slate-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-extrabold">Contact</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Let’s build something great together</p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <form class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm" action="mailto:palash@example.com" method="post" enctype="text/plain">
+          <div class="grid gap-4">
+            <label class="grid gap-2 text-sm">
+              <span>Name</span>
+              <input type="text" name="name" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"/>
+            </label>
+            <label class="grid gap-2 text-sm">
+              <span>Email</span>
+              <input type="email" name="email" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"/>
+            </label>
+            <label class="grid gap-2 text-sm">
+              <span>Message</span>
+              <textarea name="message" rows="5" required class="rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2"></textarea>
+            </label>
+            <button type="submit" class="mt-2 inline-flex items-center rounded-xl bg-brand px-4 py-2.5 font-semibold text-white hover:bg-brand-dark">Send</button>
+          </div>
+        </form>
+        <div class="grid gap-4 text-sm">
+          <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <h3 class="font-bold mb-2">Email</h3>
+            <a href="mailto:palash@example.com" class="underline">palash@example.com</a>
+          </div>
+          <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <h3 class="font-bold mb-2">Social</h3>
+            <ul class="space-y-1">
+              <li><a class="underline" href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a class="underline" href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a class="underline" href="#" target="_blank" rel="noreferrer">Twitter/X</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800 text-sm">
+    <div class="container mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
+      <p>© <span id="year"></span> Palash Chakraborty. All rights reserved.</p>
+      <div class="flex items-center gap-3">
+        <a href="#home" class="underline">Back to top</a>
+      </div>
+    </div>
+	<!-- Chatbot Popup -->
+  <button id="chatBtn" class="fixed bottom-5 right-5 bg-blue-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">💬</button>
+
+  <div id="chatPopup" class="hidden fixed bottom-20 right-5 w-80 h-96 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-2xl shadow-lg flex flex-col">
+    <div class="flex items-center justify-between p-3 border-b border-slate-200 dark:border-slate-700">
+      <h3 class="font-bold">Ask me anything about Palash</h3>
+      <button id="closeChat" class="text-slate-500">✕</button>
+    </div>
+    <div id="chatMessages" class="flex-1 overflow-y-auto p-3 space-y-2 text-sm"></div>
+    <form id="chatForm" class="p-3 border-t border-slate-200 dark:border-slate-700 flex gap-2">
+      <input type="text" id="chatInput" placeholder="Type a message..." class="flex-1 border rounded-lg px-3 py-2 text-sm" required>
+      <button type="submit" class="bg-blue-500 text-white px-3 py-2 rounded-lg">Send</button>
+    </form>
+  </div>
+  </footer>
+
+  <!-- JSON‑LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Palash Chakraborty",
+    "jobTitle": "Senior Software Engineer / Tech Lead",
+    "description": "18 years IT experience across full‑stack, cloud, and architecture. Ex‑Cognizant.",
+    "url": "",
+    "sameAs": ["", "", ""]
+  }
+  </script>
+
+  <!-- Interactivity -->
+  <script>
+  
+  
+  
+  const chatBtn = document.getElementById('chatBtn');
+    const chatPopup = document.getElementById('chatPopup');
+    const closeChat = document.getElementById('closeChat');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    chatBtn.addEventListener('click', () => chatPopup.classList.toggle('hidden'));
+    closeChat.addEventListener('click', () => chatPopup.classList.add('hidden'));
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = chatInput.value.trim();
+      if(!msg) return;
+      const div = document.createElement('div');
+      div.className = 'p-2 bg-blue-100 rounded-lg self-end';
+      div.textContent = msg;
+      chatMessages.appendChild(div);
+      chatInput.value = '';
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      setTimeout(() => {
+        const reply = document.createElement('div');
+        reply.className = 'p-2 bg-gray-100 rounded-lg self-start';
+        reply.textContent = 'Thanks for reaching out! I will get back to you soon.';
+        chatMessages.appendChild(reply);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 1000);
+    });
+  
+  
+  
+  
+  
+  
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const sun = document.getElementById('sun');
+    const moon = document.getElementById('moon');
+    const root = document.documentElement;
+
+    function setTheme(mode){
+      if(mode === 'dark'){
+        root.classList.add('dark');
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
+        localStorage.setItem('theme','dark');
+      } else {
+        root.classList.remove('dark');
+        sun.classList.remove('hidden');
+        moon.classList.add('hidden');
+        localStorage.setItem('theme','light');
+      }
+    }
+
+    // Initialize theme from system or saved
+    const saved = localStorage.getItem('theme');
+    if(saved){ setTheme(saved); } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){ setTheme('dark'); }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = root.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Résumé link placeholder – replace with your PDF URL
+    document.getElementById('resumeLink').href = '#';
+    document.getElementById('resumeLinkMobile').href = '#';
+  </script>
+</body>
+</html>
